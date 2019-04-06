@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Register{% endblock title %}
+
+
+{% block main %}
+    <h1>Register For MyDB</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Register</button>
+    </form>
+{% endblock main %}
+    
