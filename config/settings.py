@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['localhost','127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'crispy_forms',
     'user',
     'core',
     'django.contrib.admin',
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
 ]
 
 MIDDLEWARE = [
@@ -130,3 +132,5 @@ LOGIN_REDIRECT_URL = "core:MovieList"
 # Media settings
 MEDIA_ROOT = os.path.join(BASE_DIR,'media_root')
 MEDIA_URL = '/uploaded/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

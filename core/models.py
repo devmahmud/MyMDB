@@ -86,16 +86,16 @@ class Person(models.Model):
 
     def __str__(self):
         if self.died:
-            return "{}, {} ({}-{})".format(
+            return "{}, {} ({} - {})".format(
                 self.last_name,
                 self.first_name,
-                self.born,
-                self.died
+                self.born.strftime('%d/%b/%Y'),
+                self.died.strftime('%d/%b/%Y')
             )
         return "{}, {} ({})".format(
             self.last_name,
             self.first_name,
-            self.born,
+            self.born.strftime('%d/%b/%Y'),
         )
 
 

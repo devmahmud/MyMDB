@@ -3,11 +3,11 @@
 {% block title %}All The Movies{% endblock %}
 
 {% block main %}
-    <ul>
+    <ul class="list-group">
         {% for movie in object_list %}
-            <li><a href="{% url 'core:MovieDetail' pk=movie.id %}">{{ movie }}</a></li>
+            <li class="list-group-item">{{ forloop.counter }}.&nbsp;<a href="{% url 'core:MovieDetail' pk=movie.id %}">{{ movie }}</a></li>
         {% empty %}
-            <li>No movies yet.</li>
+            <li class="list-group-item">No movies yet.</li>
         {% endfor %}
     </ul>
     
